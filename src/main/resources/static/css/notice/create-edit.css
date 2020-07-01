@@ -1,0 +1,25 @@
+.notice-form {
+    padding: 10px;
+}
+
+.notice-form #saveBtn {
+    width: 80px;
+}
+
+.notice-form .table th {
+    width: 150px;
+    background-color: #DDD!important;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.notice-form .table td {
+    text-align: left;
+}
+
+.notice-form .table #formPosition {
+    width: 100px;
+}
+.notice-form .table #formState {
+    margin: 0;
+}

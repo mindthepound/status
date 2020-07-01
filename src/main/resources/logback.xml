@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <property name="LOG_HOME" value="./logs"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                <pattern>[%d{yyyy/MM/dd HH:mm:ss.SSS}] [%5p] [%3t] %class{0} %M %m%n</pattern>
+            </Pattern>
+        </layout>
+    </appender>
+
+
+    <!--    <appender name="FILE-AUDIT"-->
+    <!--              class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+        <discriminator>
+            <key>status</key>
+            <defaultValue>status.info</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-status" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+                <param name="DatePattern" value="yyyy-MM-dd" />
+                <param name="File" value="${LOG_HOME}/" />
+
+                <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                    <Pattern>
+                        [%d{yyyy/MM/dd HH:mm:ss.SSS}] [%5p] [%3t] %class{0} %M %m%n
+                    </Pattern>
+                </encoder>
+
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <!-- rollover daily -->
+                    <fileNamePattern>
+                        ${LOG_HOME}/%d{yyyy-MM-dd}.log.gz
+                    </fileNamePattern>
+
+                </rollingPolicy>
+            </appender>
+        </sift>
+
+    </appender>
+    <!--
+        <appender name="FILE-ERROR"
+            class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${LOG_HOME}/ata.err.log</file>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>
+                    [%d{yyyy/MM/dd HH:mm:ss.SSS}] [%5p] [%3t] %class{0} %M %m%n
+                </Pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>
+                    ${LOG_HOME}/ata.err.log.%d{yyyy-MM-dd}.gz
+                </fileNamePattern>
+            </rollingPolicy>
+        </appender>
+    -->
+    <root level="info">
+        <appender-ref ref="SIFT"/>
+        <!-- appender-ref ref="STDOUT"/ -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

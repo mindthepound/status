@@ -1,0 +1,179 @@
+label.ibox-label {
+  width: 80px;
+}
+input.ibox-input {
+  display: inline-block;
+  width: calc((100% - 60px)/2);
+}
+p.bg-info {
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cw-result {
+  margin-top: 20px;
+}
+.cw-result .auth-type {
+  border: none;
+  color: #FFF;
+}
+.cw-result .auth-type.kakao {
+  background: #FCF021;
+  color: #1A1A19;
+}
+.cw-result .auth-type.facebook {
+  background: #2C4589;
+}
+.cw-result .auth-type.uid {
+  background: #31BE24;
+}
+.cw-i-price#plusFormFieldPoint::-webkit-input-placeholder,
+.cw-i-price#minusFormFieldPoint::-webkit-input-placeholder {
+  text-align: left!important;
+}
+.input-group .input-group-addon+p.form-control-static {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.abuse-label {
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+}
+.abuse.abuse-detail-btn {
+  position: absolute;
+  right: 0;
+  border: 0;
+  background:  transparent;
+  outline: none;
+}
+.abuse.abuse-detail {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(221, 221, 221);
+}
+.abuse.abuse-add-log {
+  padding: 0 10px;
+  position: absolute;
+  right: 30px;
+}
+.abuse.abuse-add-log.add-empty-log {
+  right: 105px;
+}
+.abuse.abuse-remove {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* coupon */
+.plus-coupon {
+  margin: 10px 10px -20px 0;
+}
+.list-group {
+  padding: 10px;
+}
+.list-group .list-group-item.list-coupon-item {
+  padding: 0;
+  border: none;
+}
+.list-group .list-group-item .item-title {
+  font-size: 18px;
+}
+.list-group .list-group-item button.item-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 14px;
+  color: #767676;
+  background-color: #fff;
+  border: 1px solid #e1e1e8;
+  border-radius: 0 4px 0 4px;
+  border-top-right-radius: 0;
+  width: 80px;
+  height: 100%;
+}
+.list-group .list-group-item button.item-btn:hover {
+  color: #333!important;
+  background-color: #e6e6e6!important;
+  border-color: #adadad!important;
+}
+.list-group .list-group-item button.item-btn div.glyphicon {
+  font-size: 20px;
+}
+.list-group .list-group-item .panel-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-group .list-group-item .panel-footer span {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #DDD;
+}
+.list-group .list-group-item .panel-footer span:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+/* /coupon */
+
+/** partner */
+#resultPartners tr input {
+  display: none;
+}
+#resultPartners tr span.mode-show {
+  display: inline-block;
+}
+#resultPartners tr.mode-edit input {
+  display: block;
+}
+#resultPartners tr.mode-edit span.mode-show {
+  display: none;
+}
+#resultPartners tr button.mode-edit {
+  display: block;
+}
+#resultPartners tr button.mode-save {
+  display: none;
+}
+#resultPartners tr.mode-edit button.mode-edit {
+  display: none;
+}
+#resultPartners tr.mode-edit button.mode-save {
+  display: inline-block;
+  width: 40px;
+}
+
+
+/* record */
+.show-result.search-info#userRecord select.record-type{
+  float: right;
+  width: 80px;
+  height: 28px;
+  font-weight: initial;
+}
+#recordTableData tr th {
+  text-align: center;
+}
+#resultRecordsDate tr, #resultRecordsTotal tr {
+  background: #f5f5f5;
+}
+/* /record */
+
+/* friend */
+#sendFriendList .list-friend-item
+  , #receiveFriendList .list-friend-item
+  , #friendList .list-friend-item {
+  padding: 10px 30px;
+}
+#sendFriendList .list-friend-item img
+  , #receiveFriendList .list-friend-item img
+  , #friendList .list-friend-item img {
+  width: 80px;
+  height: 80px;
+}
+/* /friend */

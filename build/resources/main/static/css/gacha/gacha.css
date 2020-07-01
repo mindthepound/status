@@ -1,0 +1,194 @@
+#page-wrapper {
+    padding-bottom: 30px;
+}
+h4.header span.small {
+    font-weight: 700;
+}
+
+/* general */
+.nav-list li {
+    padding: 10px 0;
+}
+.off button.no-data {
+    padding: 10px;
+    white-space: normal;
+    background: #DDD;
+    border: 1px outset;
+    color: #808080;
+}
+.off button.no-data:hover, .off button.no-data:focus {
+    background: #808080;
+    color: #FFF;
+}
+/* /general */
+
+/* group */
+#groupChallengeDiv button[name=cancel] {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#addItem {
+    margin-bottom: 10px;
+}
+#itemDiv table th {
+    text-align: center;
+}
+#itemDiv table td button {
+    width: 40px;
+}
+#itemDiv tr.first-header th:nth-child(2), tr.first-header th:nth-child(4) {
+    border-top: none!important;
+    border-bottom: none!important;
+}
+#itemDiv tr.second-header th:nth-child(3), tr.second-header th:nth-child(9), tr.second-header th:nth-child(12) {
+    border-top: none!important;
+    border-bottom: none!important;
+}
+#itemDiv button.group-remove {
+    padding: 0;
+    margin: 5px 10px 0 0;
+}
+#itemDiv input[type="number"]::-webkit-outer-spin-button,
+#itemDiv input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#groupChallengeDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+#groupChallengeDiv div.input-group {
+    margin: 5px;
+    max-width: 400px;
+}
+.off div.no-group-text {
+    text-align: center;
+    color: #808080;
+    background: #DDD;
+    padding: 20px;
+}
+.on div.no-group-text {
+    display: none;
+}
+
+/* /group */
+
+/* cw-image */
+.cw-file-input {
+    display: block;
+    font-size: inherit;
+    position: relative;
+}
+.cw-file-input input[type=file] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.cw-file-multiple .cw-file-container {
+    position: relative;
+    display: block;
+    height: auto;
+    border-radius: 4px;
+    border: 1px dashed #AAA;
+    cursor: pointer;
+}
+.cw-file-multiple .cw-file-container .cw-file-name .cw-icon {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: auto;
+    line-height: 64px;
+    width: auto;
+    font-size: 64px;
+    color: #D5D5D5;
+    margin: 4px 0;
+    background-color: transparent;
+}
+.cw-file-multiple .cw-file-container .cw-file-name img+.cw-icon, .cw-file-multiple .cw-file-container.selected .cw-file-name img+.cw-icon, .cw-file-multiple .cw-file-container.selected i.cw-icon {
+    display: none;
+}
+.cw-file-input .remove {
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.cw-file-multiple .remove {
+    right: -11px;
+    top: -11px;
+    border: 3px solid #BBB;
+    border-radius: 32px;
+    background-color: #FFF;
+    color: red;
+    width: 23px;
+    height: 23px;
+    line-height: 16px;
+}
+.cw-file-input .cw-file-container.selected+.remove {
+    display: inline-block;
+}
+.cw-file-multiple .cw-file-container .cw-file-name {
+    position: relative;
+    display: block;
+    padding: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+.cw-file-multiple .cw-file-container .cw-file-name:after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 4px;
+    background-color: #555;
+    color: #FFF;
+    opacity: .8;
+}
+.cw-file-input .cw-file-container .cw-file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 28px;
+    font-size: 13px;
+    vertical-align: top;
+}
+.cw-file-multiple .cw-file-container.selected .cw-file-name {
+    text-align: center;
+    border-bottom: 1px solid #222;
+    margin: 0 1px 3px;
+}
+.cw-file-multiple .cw-file-container .cw-file-name:last-child {
+    margin: 0 1px
+}
+.cw-file-multiple .cw-file-container.selected .cw-file-name:after {
+    display: none;
+}
+.cw-file-input .cw-file-container.selected .cw-file-name:after {
+    display: inline-block;
+    content: attr(data-title);
+    white-space: pre;
+}
+.cw-file-input .cw-file-container.selected img.cw-file-image {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+/* /cw-image */
+
+/* timetable.tag */
+.timetable input[type="number"]::-webkit-outer-spin-button,
+.timetable input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* /timetable.tag */
+
+

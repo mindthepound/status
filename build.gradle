@@ -1,0 +1,110 @@
+buildscript {
+    ext {
+        springBootVersion = '2.2.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
+
+archivesBaseName = 'springboot-status-server'
+group = 'io.spin'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.11.413'
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-aop")
+    compile("org.springframework.boot:spring-boot-starter-data-redis")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile('org.springframework.boot:spring-boot-starter-web')
+            {
+                exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+            }
+    compile 'org.springframework.boot:spring-boot-starter-undertow'
+    compile("org.springframework.boot:spring-boot-starter-websocket")
+    runtime("org.springframework.boot:spring-boot-devtools")
+    runtime("org.springframework.boot:spring-boot-starter-freemarker")
+    runtime("org.springframework.boot:spring-boot-properties-migrator")
+
+    // Hibernate
+    // compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("mysql:mysql-connector-java")
+
+    // Support JSP
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile("javax.servlet:jstl")
+
+    // AWS
+    compile("com.amazonaws:aws-java-sdk-core")
+    compile("com.amazonaws:aws-java-sdk-cloudfront")
+    compile("com.amazonaws:aws-java-sdk-cloudwatch")
+    compile("com.amazonaws:aws-java-sdk-dynamodb")
+    compile("com.amazonaws:aws-java-sdk-emr")
+    compile("com.amazonaws:aws-java-sdk-ses")
+
+    // Swagger
+    compile("io.springfox:springfox-swagger2:2.9.2")
+    compile("io.springfox:springfox-swagger-ui:2.9.2")
+
+    // Jedis
+    compile("redis.clients:jedis:2.9.0")
+
+    // lettuce
+    compile("io.lettuce:lettuce-core:5.2.1.RELEASE")
+
+    // Apache POI
+    compile("org.apache.poi:poi-ooxml:3.17")
+    compileOnly ("org.projectlombok:lombok:1.18.10")
+    annotationProcessor ("org.projectlombok:lombok:1.18.10")
+
+    // Log
+    compile("org.slf4j:slf4j-api:1.7.25")
+
+    // mybatis
+    compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.springframework.security:spring-security-test")
+}
+
+war {
+    baseName = 'spin-status'
+    version = '0.0.1-SNAPSHOT'
+}
+
+bootRun {
+    jvmArgs = ["-Djava.net.preferIPv4Stack=true", "-Dspring.profiles.active=dev", "-Dspring.output.ansi.enabled=always", "-Dfile.encoding=UTF-8"]
+}
+
+ext.profile = (!project.hasProperty('profile') || !profile) ? 'dev' : profile
+
+sourceSets {
+    main {
+        resources {
+            srcDirs "src/main/resources", "src/main/resources-env/${profile}"
+        }
+    }
+}

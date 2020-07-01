@@ -1,0 +1,24 @@
+.notice-search-container {
+    height: 100px;
+}
+
+.notice-search-detail-container {
+    padding: 0 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    width: calc(100% - 30px);
+}
+
+.notice-search {
+    width: 200px;
+    float: right;
+}
+
+.notice-table tbody td a {
+    text-decoration: none;
+    color: #000;
+}
+
+.notice-table tbody td a:hover {
+    cursor: pointer;
+}

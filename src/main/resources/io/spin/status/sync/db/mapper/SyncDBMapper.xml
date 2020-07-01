@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.spin.status.sync.db.mapper.SyncDBMapper">
+    <insert id="insertTran" parameterType="io.spin.status.dto.emma.TranDTO">
+         INSERT INTO em_smt_tran (
+            date_client_req
+            ,content
+            ,callback
+            ,service_type
+            ,broadcast_yn
+            ,msg_status
+            ,recipient_num
+            ,id
+        ) VALUES
+            (#{dateClientReq}
+             ,#{content}
+             ,#{callback}
+             ,#{serviceType}
+             ,#{broadcastYn}
+             ,#{msgStatus}
+             ,#{recipientNum}
+             ,#{id}
+             )
+    </insert>
+</mapper>

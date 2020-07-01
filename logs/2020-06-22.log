@@ -1,0 +1,8 @@
+[2020/06/22 09:59:15.485] [ WARN] [restartedMain] StartupInfoLogger appendOn InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+[2020/06/22 09:59:20.518] [ INFO] [restartedMain] StartupInfoLogger logStarting Starting SpinApplication on Dennis-Quantum.local with PID 58302 (/Users/dennis/Core/githubRepository/biztalk-status-server/build/classes/java/main started by dennis in /Users/dennis/Core/githubRepository/biztalk-status-server)
+[2020/06/22 09:59:20.519] [ INFO] [restartedMain] SpringApplication logStartupProfileInfo The following profiles are active: dev
+[2020/06/22 09:59:20.569] [ INFO] [restartedMain] DeferredLog logTo Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2020/06/22 09:59:20.570] [ INFO] [restartedMain] DeferredLog logTo For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2020/06/22 09:59:21.764] [ INFO] [restartedMain] RepositoryConfigurationDelegate multipleStoresDetected Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020/06/22 09:59:21.767] [ INFO] [restartedMain] RepositoryConfigurationDelegate registerRepositoriesIn Bootstrapping Spring Data repositories in DEFAULT mode.
+[2020/06/22 09:59:21.816] [ INFO] [restartedMain] RepositoryConfigurationDelegate registerRepositoriesIn Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.

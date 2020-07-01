@@ -1,0 +1,180 @@
+/* cw-image */
+.cw-file-input {
+    display: block;
+    font-size: inherit;
+    position: relative;
+}
+.cw-file-input input[type=file] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.cw-file-multiple .cw-file-container {
+    position: relative;
+    display: block;
+    height: auto;
+    border-radius: 4px;
+    border: 1px dashed #AAA;
+    cursor: pointer;
+}
+.cw-file-multiple .cw-file-container .cw-file-name .cw-icon {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: auto;
+    line-height: 64px;
+    width: auto;
+    font-size: 64px;
+    color: #D5D5D5;
+    margin: 4px 0;
+    background-color: transparent;
+}
+.cw-file-multiple .cw-file-container .cw-file-name img+.cw-icon, .cw-file-multiple .cw-file-container.selected .cw-file-name img+.cw-icon, .cw-file-multiple .cw-file-container.selected i.cw-icon {
+    display: none;
+}
+.cw-file-input .remove {
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.cw-file-multiple .remove {
+    right: -11px;
+    top: -11px;
+    border: 3px solid #BBB;
+    border-radius: 32px;
+    background-color: #FFF;
+    color: red;
+    width: 23px;
+    height: 23px;
+    line-height: 16px;
+}
+.cw-file-input .cw-file-container.selected+.remove {
+    display: inline-block;
+}
+.cw-file-multiple .cw-file-container .cw-file-name {
+    position: relative;
+    display: block;
+    padding: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+.cw-file-multiple .cw-file-container .cw-file-name:after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 4px;
+    background-color: #555;
+    color: #FFF;
+    opacity: .8;
+}
+.cw-file-input .cw-file-container .cw-file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 28px;
+    font-size: 13px;
+    vertical-align: top;
+}
+.cw-file-multiple .cw-file-container.selected .cw-file-name {
+    text-align: center;
+    border-bottom: 1px solid #222;
+    margin: 0 1px 3px;
+}
+.cw-file-multiple .cw-file-container .cw-file-name:last-child {
+    margin: 0 1px
+}
+.cw-file-multiple .cw-file-container.selected .cw-file-name:after {
+    display: none;
+}
+.cw-file-input .cw-file-container.selected .cw-file-name:after {
+    display: inline-block;
+    content: attr(data-title);
+    white-space: pre;
+}
+.cw-file-input .cw-file-container.selected img.cw-file-image {
+    display: block;
+    margin: auto;
+    /*width: 80px;*/
+    height: 100px;
+}
+/* /cw-image */
+
+.form-header {
+    margin: auto auto 50px auto;
+    max-width: 730px;
+}
+.form-header+label.cw-file-input {
+    margin: auto auto 20px auto;
+    max-width: 720px;
+}
+.form-body {
+    margin: auto;
+    max-width: 720px;
+}
+#formName input[name=name], #formNote textarea[name=note] {
+    max-width: 460px;
+}
+#formDate input {
+    display: inline-block;
+    max-width: 165px;
+}
+#formTime input {
+    display: inline-block;
+    max-width: 165px;
+}
+#formNote textarea {
+    resize: none;
+}
+
+/* banner items */
+.banner-items table tbody tr[data-toggle=banner-detail] {
+    cursor: pointer;
+}
+.banner-items table tbody tr[data-type=banner-detail] {
+    background: #f5f5f5;
+}
+.banner-items table tbody tr[data-type=banner-detail] div.image-div {
+    max-width: 35%; display: inline-block;
+}
+.banner-items table tbody tr[data-type=banner-detail] div.image-div img {
+    width: auto; max-height: 276px;
+}
+.banner-items table tbody tr[data-type=banner-detail] div.detail-div {
+    display: inline-block; margin: 20px; width: calc(65% - 50px); vertical-align: top;
+}
+.banner-items table tbody tr[data-type=banner-detail] div.detail-div label {
+    width: 20%; margin-right: 20px;
+    vertical-align: top;
+}
+.banner-items table tbody tr[data-type=banner-detail] div.detail-div label+div {
+    display: inline-block;
+    width: 75%;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+/* right side bar */
+.right-side-bar {
+    z-index: 1;
+}
+.right-side-bar #closeRsbEditBanner {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+.right-side-bar #closeRsbEditBanner:focus {
+    outline: none;
+}
+
+

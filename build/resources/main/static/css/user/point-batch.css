@@ -1,0 +1,21 @@
+.choose-btn {
+  cursor: pointer;
+}
+
+.socket-result-area {
+  max-height: 235px; overflow-y: scroll; padding: 5px;
+}
+.socket-result-area .socket-result-item {
+  float: left; margin-right:10px; width: 95px;
+}
+.socket-result-item.panel-red.fail-area-item {
+  width: 130px;
+}
+.socket-result-area#defaultArea .default-area-item .panel-body {
+  padding: 10px 15px 10px 15px;
+}
+
+/* movigame-reward */
+.socket-result-item.movigame-reward {
+  width: 215px!important;
+}

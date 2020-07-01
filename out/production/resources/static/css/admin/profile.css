@@ -1,0 +1,27 @@
+.profile-form {
+  margin: auto;
+  max-width: 550px;
+}
+.profile-form .clearfix {
+    margin: 10px;
+}
+.profile-form .password-field input+input {
+    margin-top: 5px;
+}
+.profile-form .password-field .control-label {
+    display: none;
+}
+.profile-form .has-error.password-field .control-label,
+.profile-form .has-error .password-field .control-label {
+    display: block;
+}
+.profile-form .form-group .checkbox {
+    margin: 0;
+    display: inline-block;
+}
+.profile-form .button-area {
+    text-align: center;
+}
+.profile-form .button-area button {
+    width: 150px;
+}

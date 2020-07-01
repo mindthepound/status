@@ -1,0 +1,187 @@
+spring:
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+    check-template-location: false
+#  data:
+#    elasticsearch:
+#      cluster-nodes: search-spin-api-j3kab5rpfrm23gjpwglliiqrze.ap-northeast-1.es.amazonaws.com
+  aws:
+    region: ap-northeast-2
+    email-sender: report@spin.io
+  batch:
+    job:
+      enabled: false
+  redis:
+    host: 127.0.0.1
+    port: 6700
+    passwd: qlwmxhr0909!
+    timeout: 1000
+    cluster:
+      nodes: 127.0.0.1
+      port: 6700
+      max-redirects: 4
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://status-database-instance-1.cvamvn8baxdu.ap-northeast-2.rds.amazonaws.com:3306/syncstatus?serverTimezone=UTC&characterEncoding=UTF-8
+      username: admin
+      password: biztalk0901!
+#  mybatis:
+#    type-aliases-package: com.example.domain.model
+#    type-handlers-package: com.example.typehandler
+#    configuration:
+#      map-underscore-to-camel-case: true
+#      default-fetch-size: 100
+#      default-statement-timeout: 30
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    open-in-view: false
+#    show-sql: true
+#    hibernate:
+#      format_sql: true
+#      ddl-auto: update
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: DEBUG
+          type:
+            descriptor:
+              sql:
+                BasicBinder: TRACE
+  fcm:
+    api-key: AIzaSyCw6-DDy4YQFuW9d75_jYsber8klJhc2c8
+    url: https://fcm.googleapis.com/fcm/send
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  http:
+    multipart:
+      enabled: false
+server:
+  port: 5000
+  error:
+    whitelabel:
+      enabled: true
+spin:
+  api:
+    url: http://test-api.spin.io
+    token: dff2597a22c59988b2f5ba4d8dbeb33b5e7a2833a15fbcc0
+  aes:
+    url: http://ec2-54-178-224-28.ap-northeast-1.compute.amazonaws.com
+  des:
+    key: cashmovi
+  coupon:
+    url: http://coupon.spin.io
+    mdcode: M000100726
+  email: report@spin.io
+  point:
+    available-point-month: 13
+  date:
+    miliseconds:
+      1day: 86400000
+      3minutes: 180000
+
+
+---
+
+spring:
+  profiles:
+    active: prd
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+    check-template-location: false
+  #  data:
+  #    elasticsearch:
+  #      cluster-nodes: search-spin-api-j3kab5rpfrm23gjpwglliiqrze.ap-northeast-1.es.amazonaws.com
+  aws:
+    region: ap-northeast-2
+    email-sender: report@spin.io
+  batch:
+    job:
+      enabled: false
+  redis:
+    host: 127.0.0.1
+    port: 6700
+    passwd: qlwmxhr0909!
+    timeout: 1000
+    cluster:
+      nodes: 127.0.0.1
+      max-redirects: 4
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://status-database-instance-1.cvamvn8baxdu.ap-northeast-2.rds.amazonaws.com:3306/syncstatus?serverTimezone=UTC&characterEncoding=UTF-8
+    username: admin
+    password: biztalk0901!
+  #  mybatis:
+  #    type-aliases-package: com.example.domain.model
+  #    type-handlers-package: com.example.typehandler
+  #    configuration:
+  #      map-underscore-to-camel-case: true
+  #      default-fetch-size: 100
+  #      default-statement-timeout: 30
+  #  jpa:
+  #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  #    open-in-view: false
+  #    show-sql: true
+  #    hibernate:
+  #      format_sql: true
+  #      ddl-auto: update
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: DEBUG
+          type:
+            descriptor:
+              sql:
+                BasicBinder: TRACE
+  fcm:
+    api-key: AIzaSyCw6-DDy4YQFuW9d75_jYsber8klJhc2c8
+    url: https://fcm.googleapis.com/fcm/send
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  http:
+    multipart:
+      enabled: false
+server:
+  port: 5000
+  error:
+    whitelabel:
+      enabled: true
+spin:
+  api:
+    url: http://test-api.spin.io
+    token: dff2597a22c59988b2f5ba4d8dbeb33b5e7a2833a15fbcc0
+  aes:
+    url: http://ec2-54-178-224-28.ap-northeast-1.compute.amazonaws.com
+  des:
+    key: cashmovi
+  coupon:
+    url: http://coupon.spin.io
+    mdcode: M000100726
+  email: report@spin.io
+  point:
+    available-point-month: 13
+  date:
+    miliseconds:
+      1day: 86400000
+      3minutes: 180000

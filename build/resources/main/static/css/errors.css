@@ -1,0 +1,27 @@
+.navbar-header button,
+.sidebar {
+    display: none!important;
+}
+.navbar-header {
+    float: left;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+.container .not-found {
+    font-size: 200px;
+    color: #808080;
+}
+.container .not-found-text {
+    font-size: 50px;
+    font-weight: bold;
+}
+.container .sub-text {
+    font-size: 25px;
+}
+.container .exception-container {
+    margin: 0 10%;
+    text-align: center;
+}

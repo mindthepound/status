@@ -1,0 +1,64 @@
+
+input[type=number]:invalid {
+    border-color: #a94442;
+}
+
+p.bg-info {
+    padding-left: 10px;
+    border-radius: 3px;
+}
+
+.form-control[readonly] {
+    background-color: #FFF;
+}
+
+#result-campaigns-table tbody tr {
+    cursor: pointer;
+}
+
+.general {
+    padding: 15px;
+}
+
+.general .general-right {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.general img {
+    display: block;
+    max-height: 400px;
+    margin: auto;
+}
+
+.detail {
+    padding: 15px 45px 15px 45px;
+}
+
+.ad-status {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+caption .ad-status {
+    width: 15px;
+    height: 15px;
+}
+
+@media (min-width: 1100px) {
+    .below {
+        position:  absolute;top: 0;left: 200px;
+    }
+}
+
+.campaign-image img {
+    max-width: 100%;
+}
+.campaign-image div.campaign-image-title {
+    margin-top: 3px;
+    font-size: 20px;
+    border: 3px double #ddd;
+}
